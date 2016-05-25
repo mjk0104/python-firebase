@@ -9,7 +9,7 @@ class Firebase():
     ROOT_URL = '' #no trailing slash
 
     def __init__(self, root_url, auth_token=None):
-        if !root_url.endswith('firebaseio.com/'):
+        if not root_url.endswith('firebaseio.com/'):
             self.ROOT_URL = root_url.rstrip('/')
         else:
             self.ROOT_URL = root_url
