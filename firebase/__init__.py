@@ -57,7 +57,6 @@ class Firebase():
         return self.__request('patch', data = data)
 
     def get(self):
-        print('Plugin Point')
         return self.__request('get')
 
     #POST differs from PUT in that it is equivalent to doing a 'push()' in
@@ -84,6 +83,8 @@ class Firebase():
                 params = kwargs['params']
                 del kwargs['params']
             params.update({'auth': self.auth_token})
+            
+        print('Plugin Point')
 
         r = requests.request(method, self.__url(), params=params, **kwargs)
         r.raise_for_status() #throw exception if error
