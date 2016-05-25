@@ -84,7 +84,7 @@ class Firebase():
                 del kwargs['params']
             params.update({'auth': self.auth_token})
             
-        print('Plugin Point')
+        print('Plugin Point 1.2')
 
         r = requests.request(method, self.__url(), params=params, **kwargs)
         r.raise_for_status() #throw exception if error
