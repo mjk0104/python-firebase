@@ -57,6 +57,7 @@ class Firebase():
         return self.__request('patch', data = data)
 
     def get(self):
+        print('Plugin Point')
         return self.__request('get')
 
     #POST differs from PUT in that it is equivalent to doing a 'push()' in
